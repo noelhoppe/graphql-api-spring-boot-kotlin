@@ -5,4 +5,4 @@
 ```bash
 docker image build -t graphql-api . && docker container run -p 8080:8080 graphql-api
 ```
-[Show GraphiQL playground UI]("http://localhost:8080/graphiql")
+[Show GraphiQL playground UI](http://localhost:8080/graphiql)
