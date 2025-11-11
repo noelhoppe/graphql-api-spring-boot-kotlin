@@ -10,5 +10,7 @@ stages:
 iac_scan:
   stage: iac
   image: checkmarx/kics:latest
+  tags:
+    - inara
   script:
     - kics scan -p ./ansible/ansible -o ./kics/reports
