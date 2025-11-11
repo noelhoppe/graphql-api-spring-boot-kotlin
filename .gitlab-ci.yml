@@ -11,4 +11,4 @@ iac_scan:
   stage: iac
   image: checkmarx/kics:latest
   script:
-    - kics scan -p ./ansible/ansible/site.yml -o ./kics/reports
+    - kics scan -p ./ansible/ansible -o ./kics/reports
