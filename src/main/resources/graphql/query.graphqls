@@ -1,0 +1,8 @@
+type Query {
+    findUserByID(id: ID!): User
+    findAllUsers: [User!]!
+    findOderByID(id:  ID!): Order
+    findAllOrders: [Order!]!
+    findProductByID(id: ID!): Product
+    findAllProducts: [Product!]!
+}

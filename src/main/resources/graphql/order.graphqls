@@ -1,0 +1,17 @@
+type Order {
+    id: ID!
+    date: String!
+    state: String!
+    user: User!
+    items: [Item!]!
+}
+
+input OrderInput {
+    date: String!
+    state: String!
+}
+
+input OrderInputPartial {
+    date: String
+    state: String
+}

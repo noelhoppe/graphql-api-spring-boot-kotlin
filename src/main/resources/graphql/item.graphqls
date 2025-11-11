@@ -1,0 +1,15 @@
+type Item {
+    id: ID!
+    quantity: Int!
+    order: Order!
+    product: Product!
+}
+
+input ItemInput {
+    quantity: Int!
+    productID: ID!
+}
+
+input ItemInputSelf {
+    quantity: Int!
+}

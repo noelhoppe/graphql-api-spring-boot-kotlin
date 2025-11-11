@@ -1,0 +1,19 @@
+type Product {
+    id: ID!
+    name: String!
+    price: Float!
+    stock: Int!
+    items: [Item!]!
+}
+
+input ProductInput {
+    name: String!
+    price: Float!
+    stock: Int!
+}
+
+input ProductInputPartial {
+    name: String
+    price: Float
+    stock: Int
+}

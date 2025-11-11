@@ -1,0 +1,18 @@
+type Mutation {
+    createUser(userInput: UserInput!): User!
+    updateUser(id: ID!, userInput: UserInput!): User
+    updateUserPartial(id: ID!, userInputPartial: UserInputPartial!): User
+    deleteUser(id: ID!): Boolean
+
+    createOrderForUser(userID: ID!, orderInput: OrderInput!, items: [ItemInput!]!): Order!
+    updateOrder(id: ID!, orderInput: OrderInput!): Order
+    updateOrderPartial(id: ID!, orderInputPartial: OrderInputPartial!): Order
+    deleteOrder(id: ID!): Boolean
+
+    updateOrderItem(id: ID!, itemInputSelf: ItemInputSelf): Item
+
+    createProduct(productInput: ProductInput): Product!
+    updateProduct(id: ID!, productInput: ProductInput): Product
+    updateProductPartial(id: ID!, productInputPartial: ProductInputPartial): Product
+    deleteProduct(id: ID!): Boolean
+}

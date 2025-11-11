@@ -1,0 +1,19 @@
+type User {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    orders: [Order!]!
+}
+
+input UserInput {
+    firstName: String!
+    lastName: String!
+    email: String!
+}
+
+input UserInputPartial {
+    firstName: String
+    lastName: String
+    email: String
+}
