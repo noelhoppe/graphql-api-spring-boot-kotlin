@@ -1,5 +1,6 @@
 stages:
   - SAST
+  - BUILD
 
 sonar_qube:
   stage: SAST
@@ -8,3 +9,14 @@ sonar_qube:
     - sonarqube
   script:
     - sonar-scanner -D sonar.host.url="$SONAR_HOST_URL" -D sonar.login="$SONAR_LOGIN" -D sonar.projectKey="$SONAR_PROJECT_KEY"
+
+build_image:
+  stage: BUILD
+  image: gcr.io/kaniko-project/executor:debug
+  tags:
+    - kaniko
+  script:
+    - /kaniko/executor \ 
+      --context "$CI_PROJECT_DIR"
+      --dockerfile "$CI_PROJECT_DIR/Dockerfile"
+      --destination "$CI_REGISTRY_IMAGE"
