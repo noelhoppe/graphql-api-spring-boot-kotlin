@@ -7,6 +7,4 @@ sonar_qube:
   tags:
     - sonarqube
   script:
-    - sonar-scanner \
-      -D sonar.host.url=$SONAR_HOST_URL \
-      -D sonar.login=$SONAR_TOKEN
+    - sonar-scanner -D sonar.host.url="$SONAR_HOST_URL" -D sonar.login="$SONAR_LOGIN"
