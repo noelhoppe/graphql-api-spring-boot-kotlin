@@ -12,7 +12,9 @@ sonar_qube:
 
 build_image:
   stage: BUILD
-  image: gcr.io/kaniko-project/executor:debug
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
   tags:
     - kaniko
   script:
