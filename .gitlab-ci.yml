@@ -3,7 +3,7 @@ stages:
 
 sonar_qube:
   stage: SAST
-  image: sonarqube
+  image: sonarsource/sonar-scanner-cli:4
   tags:
     - sonarqube
   script:
