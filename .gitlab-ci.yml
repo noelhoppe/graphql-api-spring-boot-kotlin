@@ -1,16 +1,8 @@
 stages:
-  - iac
-  - infrastructure
-  - test
-  - build
-  - scan
-  - push
-  - deploy
+  - SAST
 
-iac_scan:
-  stage: iac
-  image: checkmarx/kics:latest
+sonar_qube:
+  stage: SAST
+  image: sonarqube
   tags:
-    - inara
-  script:
-    - kics scan -p ./ansible/ansible -o ./kics/reports
+    - sonarqube
