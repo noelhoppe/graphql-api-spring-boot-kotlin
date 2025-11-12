@@ -8,5 +8,5 @@ sonar_qube:
     - sonarqube
   script:
     - sonar-scanner \
-      -Dsonar.host.url=$SONAR_HOST_URL \
-      -Dsonar.login=$SONAR_TOKEN
+      -D sonar.host.url=$SONAR_HOST_URL \
+      -D sonar.login=$SONAR_TOKEN
